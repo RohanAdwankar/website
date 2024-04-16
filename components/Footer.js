@@ -14,6 +14,7 @@ const footerACMLinks = [
 	{ title: 'Sponsors', path: '/sponsors' },
 	{ title: 'Our Team', path: '/team' },
 	{ title: 'Membership Portal', path: 'https://members.uclaacm.com', ext: true },
+	{ title: 'History', path: '/history' },
 ];
 
 const footerInitiativeLinks = [

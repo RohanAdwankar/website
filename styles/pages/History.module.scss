@@ -1,0 +1,53 @@
+@import '../variables.scss';
+
+#timeline {
+  padding-bottom: 40px;
+
+	.timeline-tile {
+		display: flex;
+		flex-direction: row;
+
+		.timeline-date {
+			p {
+				white-space: nowrap;
+				margin-top: 20px;
+				width: 120px;
+				text-align: right;
+			}
+		}
+
+		.timeline-info {
+			text-align: left;
+			border-left: 1px solid black;
+
+			h3 {
+				margin: 1em 22px;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		.timeline-tile {
+			display: block;
+
+			.timeline-date {
+				p {
+					text-align: left;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+			}
+
+			.timeline-info {
+				border: none;
+				
+				h3 {
+					margin: 0 22px 1em 22px;
+				}
+        p {
+          margin-bottom: 30px;
+        }
+			}
+		}
+	}
+}
