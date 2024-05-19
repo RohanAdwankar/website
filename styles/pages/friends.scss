@@ -1,0 +1,107 @@
+.friends-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.friend-card-container {
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 20px 0;
+    box-shadow: 0 0 1pt 0;
+
+    // Expand the grid slightly so the image takes up <50% of the grid;
+    // render based on whether grid is reversed
+    & .grid-tablet-2 {
+        grid-template-columns: 1fr 1.5fr;
+        margin: 0 0 20px;
+    }
+
+    & .grid-tablet-2:has(div.grid-tablet-2-reverse) {
+        grid-template-columns: 1.5fr 1fr;
+    }
+    
+}
+
+.friend-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: bottom;
+    height: 100%;
+    
+    div {
+        display: block !important;
+    }
+
+    img {
+        object-fit: cover;
+        max-width: 80%;
+        max-height: 80%;
+        box-shadow: none !important;
+    }
+}
+
+.friend-links-container {
+    margin-top: 10px;
+    & .icon-link {
+        font-size: 2rem;
+        margin: 0 3px;
+
+        :hover {
+            color: black;
+        }
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px;
+    align-items: center;
+    text-align: center;
+    column-gap: 2%;
+    
+    & .project-card-container {
+        flex: 0 0 100%;
+        flex-direction: column;
+        // column-gap: 2px;
+        height: 100%;
+        // padding: 5px 10px;
+        margin-block-end: 10px;
+        border-radius: 5px;
+        border: 1px dotted gray;
+        
+        @media (min-width: 688px) {
+            flex: 0 0 48%;
+        }
+
+        & .project-card-contents {
+            // padding: 0 10px;
+            padding: 10px;
+        }
+    }
+
+}
+
+.project-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: bottom;
+    // width: 50%;
+    height: 80%;
+
+    & .project-image {
+        // height: 160px;
+        height: 100%;
+        border-radius: 2%;
+        object-fit: scale-down;
+    }
+}
+
+.content-divider {
+    border: 1px solid gray;
+    opacity: 30%;
+    margin: 0 10px;
+}

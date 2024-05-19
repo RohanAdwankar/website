@@ -12,6 +12,7 @@ const footerACMLinks = [
 	{ title: 'Internship Program', path: '/internship' },
 	{ title: 'Dev Team', path: '/dev'},
 	{ title: 'Sponsors', path: '/sponsors' },
+	{ title: 'Friends', path: '/friends' },
 	{ title: 'Our Team', path: '/team' },
 	{ title: 'Membership Portal', path: 'https://members.uclaacm.com', ext: true },
 ];
