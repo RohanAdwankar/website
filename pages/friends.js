@@ -61,15 +61,20 @@ function FriendProjectCard({ project }) {
     return (
         <div className='project-card-container'>
             <div className='project-card-contents'>
-                <div className='project-image-wrapper'>
+                <a
+                    className='project-image-wrapper'
+                    href={project.url}
+                    target='_blank'
+                    rel='noreferrer noopener'
+                >
                     <Image
                         className='project-image'
                         src={project.image}
                         alt={project.name}
-                        width={1000}
-                        height={600}
+                        width={300}
+                        height={100}
                     />
-                </div>
+                </a>
                 <h4>
                     <a href={project.url} target='_blank' rel='noreferrer noopener'>
                         {project.title}
@@ -94,11 +99,11 @@ function FriendCard({ friend, index }) {
                         rel='noreferrer noopener'
                         key={friend.name}
                     >
-                        <img
+                        <Image
                             src={friend.image}
                             alt={friend.name}
-                            // width={250}
-                            // height={100}
+                            width={400}
+                            height={200}
                         />
                     </a>
                 </div>
