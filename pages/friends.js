@@ -17,23 +17,23 @@ import Banner from '../components/Banner';
 import Layout from '../components/Layout';
 import data from '../data';
 
-// From `committees.js` - refactor into utility
 function FriendIconLink({ orgName, link }) {
     const iconStr =
-        link.platform === 'website' ? `${orgName}'s website` : `${orgName} on ${link.platform}`;
+    link.platform === 'website' ? `${orgName}'s website` : `${orgName} on ${link.platform}`;
     return (
         <a
-            className='icon-link'
-            href={link.link}
-            target='_blank'
-            rel='noreferrer noopener'
-            aria-label={iconStr}
+        className='icon-link'
+        href={link.link}
+        target='_blank'
+        rel='noreferrer noopener'
+        aria-label={iconStr}
         >
             <LinkIcon platform={link.platform} />
         </a>
     );
 }
 
+// From `committees.js` - refactor into utility
 function LinkIcon({ platform }) {
     // see https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility#web-fonts-semantic
     // for more on accessibility
@@ -56,6 +56,9 @@ function LinkIcon({ platform }) {
     }
 }
 
+/**
+ * A single project card that will be displayed under an organization's collaborations
+ */
 function FriendProjectCard({ project }) {
     return (
         <a
@@ -85,6 +88,11 @@ function FriendProjectCard({ project }) {
     );
 }
 
+/**
+ * Displays an organization that is a friend of ACM in a split-grid format,
+ * with the organization's title, description, image, social media links
+ * and past collaborations
+ */
 function FriendCard({ friend, index }) {
     return (
         <div className='friend-card-container'>
@@ -130,6 +138,9 @@ function FriendCard({ friend, index }) {
     );
 }
 
+/**
+ * Overall friends page
+ */
 function Friends() {
     const { friends } = data;
     return (
