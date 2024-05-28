@@ -20,7 +20,6 @@
     & .grid-tablet-2:has(div.grid-tablet-2-reverse) {
         grid-template-columns: 1.5fr 1fr;
     }
-    
 }
 
 .friend-image-wrapper {
@@ -30,7 +29,7 @@
     vertical-align: bottom;
     height: 100%;
     padding: 0 10px;
-    
+
     div {
         display: block !important;
     }
@@ -61,28 +60,39 @@
     margin: 0 10px;
     align-items: center;
     text-align: center;
-    column-gap: 2%;
-    
-    & .project-card-container {
-        flex: 0 0 100%;
-        flex-direction: column;
-        // column-gap: 2px;
-        height: 100%;
-        // padding: 5px 10px;
-        margin-block-end: 10px;
-        border-radius: 5px;
-        border: 1px dotted gray;
-        
-        @media (min-width: 688px) {
-            flex: 0 0 48%;
-        }
+    // column-gap: 2%;
 
-        & .project-card-contents {
-            // padding: 0 10px;
-            padding: 10px;
-        }
+    a,
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.project-card-container {
+    // background-color: #edeff9;
+    flex: 0 0 100%;
+    flex-direction: column;
+    // column-gap: 2px;
+    height: 100%;
+    // padding: 5px 10px;
+    margin: auto;
+    margin-block-end: 10px;
+    border-radius: 5px;
+    border: 1px dotted gray;
+
+    &:hover {
+        background-image: linear-gradient(to bottom right, #f9f9f9, #f1f1f1);
     }
 
+    @media (min-width: 688px) {
+        flex: 0 0 48%;
+    }
+
+    & .project-card-contents {
+        // padding: 0 10px;
+        padding: 10px;
+    }
 }
 
 .project-image-wrapper {

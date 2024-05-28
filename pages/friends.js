@@ -17,7 +17,6 @@ import Banner from '../components/Banner';
 import Layout from '../components/Layout';
 import data from '../data';
 
-
 // From `committees.js` - refactor into utility
 function FriendIconLink({ orgName, link }) {
     const iconStr =
@@ -59,14 +58,14 @@ function LinkIcon({ platform }) {
 
 function FriendProjectCard({ project }) {
     return (
-        <div className='project-card-container'>
+        <a
+            className='project-card-container'
+            href={project.url}
+            target='_blank'
+            rel='noreferrer noopener'
+        >
             <div className='project-card-contents'>
-                <a
-                    className='project-image-wrapper'
-                    href={project.url}
-                    target='_blank'
-                    rel='noreferrer noopener'
-                >
+                <div className='project-image-wrapper'>
                     <Image
                         className='project-image'
                         src={project.image}
@@ -74,7 +73,7 @@ function FriendProjectCard({ project }) {
                         width={300}
                         height={100}
                     />
-                </a>
+                </div>
                 <h4>
                     <a href={project.url} target='_blank' rel='noreferrer noopener'>
                         {project.title}
@@ -82,7 +81,7 @@ function FriendProjectCard({ project }) {
                 </h4>
                 <p>{project.description}</p>
             </div>
-        </div>
+        </a>
     );
 }
 
@@ -99,12 +98,7 @@ function FriendCard({ friend, index }) {
                         rel='noreferrer noopener'
                         key={friend.name}
                     >
-                        <Image
-                            src={friend.image}
-                            alt={friend.name}
-                            width={400}
-                            height={200}
-                        />
+                        <Image src={friend.image} alt={friend.name} width={400} height={200} />
                     </a>
                 </div>
 
@@ -124,7 +118,7 @@ function FriendCard({ friend, index }) {
             {friend.projects.length > 0 && (
                 <div>
                     <div className='content-divider' />
-                    <h3>Featured Projects</h3>
+                    <h3>Past Collaborations</h3>
                     <div className='projects-container'>
                         {friend.projects.map((project) => (
                             <FriendProjectCard project={project} key={project.title} />

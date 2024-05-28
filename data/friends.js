@@ -53,14 +53,7 @@ export default [
                     "Project summary - Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                 image: "/images/friends/exploretech-la.svg",
                 url: "/",
-            },
-            {
-                title: "Project D",
-                description:
-                    "Project summary - Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                image: "/images/friends/exploretech-la.svg",
-                url: "/",
-            },
+            }
         ],
     },
     {
